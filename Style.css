@@ -325,5 +325,43 @@ body{
 
   /* fin zone case qui se retourne */
 
+.métier-info-titre1{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.métier-info-titre2{
+    background: linear-gradient(1turn,#8300a7, #030060);
+    width: 90%;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    font-size: 44px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: rgb(255, 187, 0);
+}
+
+
+.métier-info-text1{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.métier-info-text2{
+    background: linear-gradient(#8300a7, #030060);
+    width: 90%;
+    border-radius: 0px 0px 10px 10px ;
+    text-align: center;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+}
+
+
 
   /* test */

@@ -49,7 +49,6 @@ body{
 }
 .info-perso3{
     border-radius: 10px 10px;
-    /* background: linear-gradient(0.25turn,#c4e5ff, #b4ffba ,#ffb4b4); */
     background-color: rgb(255, 255, 255);
     width:auto;
     height: auto;
@@ -64,8 +63,6 @@ body{
 
 .info-perso-titre{
     border-radius: 10px;
-    /* background: linear-gradient(0.75turn,#c4e5ff, #b4ffba ,#ffb4b4); */
-
     width: auto;
     padding: 5px 10px;
     height: auto;
@@ -100,8 +97,6 @@ body{
 
 .info-perso-CV{
     border-radius: 10px;
-    /* background: linear-gradient(0.75turn,#c4e5ff, #b4ffba ,#ffb4b4); */
-
     width: auto;
     padding: 5px 10px;
     height: auto;
@@ -129,8 +124,6 @@ body{
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    
-
 }
 
 /* fin info perso */
@@ -138,56 +131,49 @@ body{
 
 
 /* Experience pro */
-
-.exp-pro1{
+.exp-pro-titre1,.exp-pro-text1{
     display: flex;
     justify-content: center;
     margin: 20px;
+}
+
+.exp-pro-titre1{
     margin-top: 50px;
+    margin-bottom: 0px;
+}
+.exp-pro-text1{
+    margin-top: 0px;
 }
 
-.exp-pro2{
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
+.exp-pro-titre2{
     width: 90%;
-    height: auto;
-    display:grid;
-
-}
-
-.exp-pro-titre{
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255) ;
-    width: auto;
-    padding: 5px 10px;
-    height: auto;
-    margin : 10px;
+    text-align: center;
+    background: linear-gradient(1turn,#0094a7, #004360);
+    border-radius: 10px 10px 0px 0px;
     font-size: 44px;
     font-weight: bold;
-    color:rgb(255, 149, 0);
-    text-align: center;
     text-decoration: underline;
-    margin-right: auto;
-    margin-left:auto;
-
+    color: rgb(255, 187, 0);
 }
 
-.exp-pro-Stage{
+
+.exp-pro-text2{
+    width: 90%;
+    background: linear-gradient(#0094a7, #002b60);
+    border-radius: 0px 0px 10px 10px;
+    display: grid;
+}
+
+.exp-pro-text3{
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.5) ;
+    background-color: rgba(255, 255, 255, 0.7) ;
     border-style: outset;
-    width: auto;
-    height: auto;
     padding: 5px 10px;
     margin : 10px;
     margin-bottom: 40px;
-    font-size: 18px;
-    color: rgb(0, 0, 0);
     align-content: center;
     margin-right: auto;
-
 }
-
 
 .Date_Stage{
     font-size: 28px;
@@ -202,9 +188,8 @@ body{
 }
 
 .Descr_Stage{
-    font-size: 16px;
+    font-size: 18px;
     color: black
-
 }
 
 
@@ -213,7 +198,7 @@ body{
 
 
 
-
+/* Expérience pro */
 .compétences-titre1{
     display: flex;
     justify-content: center;
@@ -231,7 +216,6 @@ body{
     font-weight: bold;
     text-decoration: underline;
     color: rgb(255, 187, 0);
-
 }
 
 
@@ -325,43 +309,161 @@ body{
 
   /* fin zone case qui se retourne */
 
-.métier-info-titre1{
+
+  /* Zone métier de l'informatique */
+
+.métier-info-titre1, .métier-info-text1{
     display: flex;
     justify-content: center;
     margin: 20px;
+}
+
+.métier-info-titre1{
     margin-top: 50px;
     margin-bottom: 0px;
 }
 
-.métier-info-titre2{
-    background: linear-gradient(1turn,#8300a7, #030060);
+.métier-info-text1{
+    margin-top: 0px;
+}
+
+
+.métier-info-titre2, .métier-info-text2{
     width: 90%;
-    border-radius: 10px 10px 0px 0px;
     text-align: center;
+}
+
+.métier-info-titre2{
+    background: linear-gradient(1turn,#0094a7, #002b60);
+    border-radius: 10px 10px 0px 0px;
     font-size: 44px;
     font-weight: bold;
     text-decoration: underline;
     color: rgb(255, 187, 0);
 }
 
-
-.métier-info-text1{
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
 .métier-info-text2{
-    background: linear-gradient(#8300a7, #030060);
-    width: 90%;
+    background: linear-gradient(#0094a7, #030060);
     border-radius: 0px 0px 10px 10px ;
-    text-align: center;
     font-size: 32px;
     color: rgb(255, 255, 255);
+    padding-bottom: 20px;
 }
+
+
+/* Pour "agrandir" l'imange en passant la souris dessus */
+.métier-info-text2 img{
+    transition: transform 0.3s ease-in-out;
+}
+.métier-info-text2 img:hover{
+    transform: scale(1.2);
+}
+
+
+  /* Fin zone métier de l'informatique */
+
 
 
 
   /* test */
+
+  .info-perso-titre1 , .info-perso-text1 , .info-perso-CV1 , .info-perso-contact1{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    margin-bottom: 0px;
+}
+
+.info-perso-titre1{
+    margin-top: 50px;
+}
+.info-perso-text1,.info-perso-CV1,.info-perso-contact1{
+    margin-top: 0px;
+}
+
+
+
+
+.info-perso-titre2{
+    width: 90%;
+    text-align: center;
+    background: linear-gradient(#bacb00, #70cb00);
+    border-radius: 10px 10px 0px 0px;
+    font-size: 44px;
+    font-weight: bold;
+    color:rgb(255, 0, 0);
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.info-perso-text2{
+    width: 90%;
+    text-align: center;
+    background: linear-gradient(#70cb00, #00cb40);
+    border-radius: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+
+.info-perso-text3{
+    border-radius: 10px ;
+    background-color: rgba(0, 0, 0, 0.204) ;
+    border-style:double;
+    border-color: black;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    margin-bottom: 40px;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    align-content: center;
+    text-align: center;
+    min-width: 250px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-perso-CV2{
+    width: 90%;
+    text-align: center;
+    background: linear-gradient(#00cb40, #00cb9f);
+    border-radius: 0px;
+    font-size: 32px;
+    text-align: center;
+    padding-top:15px;
+    padding-bottom: 15px;   
+}
+
+.info-perso-contact2{
+    width: 90%;
+    text-align: center;
+    background: linear-gradient(#00cb9f, #0095cb);
+    border-radius: 0px 0px 10px 10px;
+    font-size: 32px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-perso-contact3{
+    border-radius: 10px ;
+    background-color: rgba(0, 0, 0, 0.204) ;
+    border-style:double;
+    border-color: black;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    align-content: center;
+    text-align: center;
+    min-width: 250px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}

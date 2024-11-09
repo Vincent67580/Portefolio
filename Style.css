@@ -33,60 +33,57 @@ body{
 
 /* info perso */
 
-.info-perso1{
+.info-perso-titre1 , .info-perso-text1 , .info-perso-CV1 , .info-perso-contact1{
     display: flex;
     justify-content: center;
     margin: 20px;
+    margin-bottom: 0px;
 }
 
-.info-perso2{
-    border-radius: 10px;
+.info-perso-titre1{
+    margin-top: 50px;
+}
+.info-perso-text1,.info-perso-CV1,.info-perso-contact1{
+    margin-top: 0px;
+}
+
+
+
+
+.info-perso-titre2{
     width: 90%;
-    height: auto;
-    display:flow-root;
-
-    
-}
-.info-perso3{
-    border-radius: 10px 10px;
-    background-color: rgb(255, 255, 255);
-    width:auto;
-    height: auto;
-    margin: auto;
-    padding: 10px 15px;
-    display:flex;
-    flex-wrap: wrap;
-    align-content: center;
-    align-self: center;
-
-}
-
-.info-perso-titre{
-    border-radius: 10px;
-    width: auto;
-    padding: 5px 10px;
-    height: auto;
-    margin : 10px;
+    text-align: center;
+    background: linear-gradient(#bacb00, #70cb00);
+    border-radius: 10px 10px 0px 0px;
     font-size: 44px;
     font-weight: bold;
     color:rgb(255, 0, 0);
     text-align: center;
     text-decoration: underline;
-    margin-right: auto;
-    margin-left:auto;
 }
 
 
-.info-perso-texte{
+.info-perso-text2{
+    width: 90%;
+    text-align: center;
+    background: linear-gradient(#70cb00, #00cb40);
+    border-radius: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+
+.info-perso-text3{
     border-radius: 10px ;
     background-color: rgba(0, 0, 0, 0.204) ;
     border-style:double;
+    border-color: black;
     width: auto;
     height: auto;
     padding: 5px 10px;
     margin-bottom: 40px;
     font-size: 22px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     align-content: center;
     text-align: center;
     min-width: 250px;
@@ -95,29 +92,51 @@ body{
     margin-right: auto;
 }
 
-.info-perso-CV{
-    border-radius: 10px;
-    width: auto;
-    padding: 5px 10px;
-    height: auto;
-    margin : 10px;
-    font-size: 32px;
-    font-weight: bold;
+.info-perso-CV2{
+    width: 90%;
     text-align: center;
-    margin-right: auto;
-    margin-left:auto;
+    background: linear-gradient(#00cb40, #00cb9f);
+    border-radius: 0px;
+    font-size: 32px;
+    text-align: center;
+    padding-top:15px;
+    padding-bottom: 15px;   
 }
 
-.info-perso-contact{
+/* Pour "agrandir" l'imange en passant la souris dessus */
+.info-perso-CV2 img{
+    transition: transform 0.1s ease-in-out;
+}
+.info-perso-CV2 img:hover{
+    transform: scale(1.5);
+    margin-bottom: 70px;
+    margin-top: 30px;
+}
+
+
+.info-perso-contact2{
+    width: 90%;
+    text-align: center;
+    background: linear-gradient(#00cb9f, #0095cb);
+    border-radius: 0px 0px 10px 10px;
+    font-size: 32px;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-perso-contact3{
     border-radius: 10px ;
     background-color: rgba(0, 0, 0, 0.204) ;
     border-style:double;
+    border-color: black;
     width: auto;
     height: auto;
     padding: 5px 10px;
-    margin-bottom: 40px;
     font-size: 22px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     align-content: center;
     text-align: center;
     min-width: 250px;
@@ -357,6 +376,7 @@ body{
 }
 .métier-info-text2 img:hover{
     transform: scale(1.2);
+    margin-bottom: 30px;
 }
 
 
@@ -367,103 +387,3 @@ body{
 
   /* test */
 
-  .info-perso-titre1 , .info-perso-text1 , .info-perso-CV1 , .info-perso-contact1{
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    margin-bottom: 0px;
-}
-
-.info-perso-titre1{
-    margin-top: 50px;
-}
-.info-perso-text1,.info-perso-CV1,.info-perso-contact1{
-    margin-top: 0px;
-}
-
-
-
-
-.info-perso-titre2{
-    width: 90%;
-    text-align: center;
-    background: linear-gradient(#bacb00, #70cb00);
-    border-radius: 10px 10px 0px 0px;
-    font-size: 44px;
-    font-weight: bold;
-    color:rgb(255, 0, 0);
-    text-align: center;
-    text-decoration: underline;
-}
-
-
-.info-perso-text2{
-    width: 90%;
-    text-align: center;
-    background: linear-gradient(#70cb00, #00cb40);
-    border-radius: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 15px;
-}
-
-.info-perso-text3{
-    border-radius: 10px ;
-    background-color: rgba(0, 0, 0, 0.204) ;
-    border-style:double;
-    border-color: black;
-    width: auto;
-    height: auto;
-    padding: 5px 10px;
-    margin-bottom: 40px;
-    font-size: 22px;
-    color: rgb(255, 255, 255);
-    align-content: center;
-    text-align: center;
-    min-width: 250px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.info-perso-CV2{
-    width: 90%;
-    text-align: center;
-    background: linear-gradient(#00cb40, #00cb9f);
-    border-radius: 0px;
-    font-size: 32px;
-    text-align: center;
-    padding-top:15px;
-    padding-bottom: 15px;   
-}
-
-.info-perso-contact2{
-    width: 90%;
-    text-align: center;
-    background: linear-gradient(#00cb9f, #0095cb);
-    border-radius: 0px 0px 10px 10px;
-    font-size: 32px;
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.info-perso-contact3{
-    border-radius: 10px ;
-    background-color: rgba(0, 0, 0, 0.204) ;
-    border-style:double;
-    border-color: black;
-    width: auto;
-    height: auto;
-    padding: 5px 10px;
-    font-size: 22px;
-    color: rgb(255, 255, 255);
-    align-content: center;
-    text-align: center;
-    min-width: 250px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}

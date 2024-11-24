@@ -1,6 +1,58 @@
 body{
     background-color:lightgray;
+    /* background: linear-gradient(0.85turn, #00b3ff, #ddff00); */
 }
+
+
+/* ZONE DE NAVIGATION */
+nav ul{ 
+    list-style-type: none;
+}
+
+nav li{
+    float: left; 
+    float: left;
+    width:25%; 
+    text-align: center; 
+} 
+
+
+nav ul::after{
+    content: "" ;
+    display:grid;
+    padding: 1px;
+}
+
+nav { 
+    width: 100%; 
+    margin: 0 ; 
+    background-color: white; 
+    position:sticky; 
+    top: 0px; 
+    z-index: 100;
+    border-radius: 20px;
+}
+
+nav a {
+    display: block; 
+    text-decoration: none; 
+    color: black; 
+    font-size: 20px;
+    border-bottom: 2px solid transparent; 
+    padding: 10px 0px; 
+    z-index: 100;
+} 
+
+nav a:hover{ 
+    color: orange; 
+    border-bottom: 5px solid gold; 
+}
+/*FIN ZONE DE NAVIGATION */
+
+
+
+
+/*ZONE NOM + PRENOM  */
  .en-tete1{
     display: flex;
     justify-content: center;
@@ -17,26 +69,23 @@ body{
     margin: 0px;
     padding: 10px 10px;
 }
-
-
-.Titre{
-    font-size: 26px;
-    color:blue;
-}
-
-.Stage{
-    margin-top: 10px;
-}
+/*FIN ZONE NOM + PRENOM  */
 
 
 
 /* info perso */
+
+.INFO-PERSO{
+    display: grid;
+}
+
 
 .info-perso-titre1 , .info-perso-text1 , .info-perso-CV1 , .info-perso-contact1{
     display: flex;
     justify-content: center;
     margin: 20px;
     margin-bottom: 0px;
+    
 }
 
 .info-perso-titre1{
@@ -46,17 +95,23 @@ body{
     margin-top: 0px;
 }
 
-
-
+.info-perso-titre2 ,.info-perso-text2 ,.info-perso-CV2 ,.info-perso-contact2{
+    background-color: rgb(190, 190, 190);
+    border-left-style: outset;
+    border-right-style: outset;
+    border-width: 10px;
+    border-color: black;
+}
 
 .info-perso-titre2{
     width: 90%;
     text-align: center;
-    background: linear-gradient(#bacb00, #70cb00);
     border-radius: 10px 10px 0px 0px;
+    border-top-style: outset ;
+
     font-size: 44px;
     font-weight: bold;
-    color:rgb(255, 0, 0);
+    color:rgb(255, 145, 0);
     text-align: center;
     text-decoration: underline;
 }
@@ -65,36 +120,15 @@ body{
 .info-perso-text2{
     width: 90%;
     text-align: center;
-    background: linear-gradient(#70cb00, #00cb40);
     border-radius: 0px;
     display: flex;
     flex-wrap: wrap;
     padding-top: 15px;
 }
 
-.info-perso-text3{
-    border-radius: 10px ;
-    background-color: rgba(0, 0, 0, 0.204) ;
-    border-style:double;
-    border-color: black;
-    width: auto;
-    height: auto;
-    padding: 5px 10px;
-    margin-bottom: 40px;
-    font-size: 22px;
-    color: rgb(255, 255, 255);
-    align-content: center;
-    text-align: center;
-    min-width: 250px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .info-perso-CV2{
     width: 90%;
     text-align: center;
-    background: linear-gradient(#00cb40, #00cb9f);
     border-radius: 0px;
     font-size: 32px;
     text-align: center;
@@ -104,19 +138,17 @@ body{
 
 /* Pour "agrandir" l'imange en passant la souris dessus */
 .info-perso-CV2 img{
-    transition: transform 0.1s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 .info-perso-CV2 img:hover{
-    transform: scale(1.5);
-    margin-bottom: 70px;
-    margin-top: 30px;
+    transform: scale(1.3);
+
 }
 
 
 .info-perso-contact2{
     width: 90%;
     text-align: center;
-    background: linear-gradient(#00cb9f, #0095cb);
     border-radius: 0px 0px 10px 10px;
     font-size: 32px;
     text-align: center;
@@ -124,18 +156,21 @@ body{
     padding-bottom: 15px;
     display: flex;
     flex-wrap: wrap;
+    border-bottom-style: outset;
 }
 
-.info-perso-contact3{
+.info-perso-text3,.info-perso-contact3{
     border-radius: 10px ;
-    background-color: rgba(0, 0, 0, 0.204) ;
+    background-color: rgba(255, 255, 255, 0.5) ;
     border-style:double;
     border-color: black;
+    border-width: 8px;
     width: auto;
     height: auto;
     padding: 5px 10px;
+    margin-bottom: 40px;
     font-size: 22px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     align-content: center;
     text-align: center;
     min-width: 250px;
@@ -148,7 +183,12 @@ body{
 
 
 
-/* Experience pro */
+/* Experience pro stage */
+.EXPERIENCES-PRO{
+    display: grid;
+}
+
+
 .exp-pro-titre1,.exp-pro-text1{
     display: flex;
     justify-content: center;
@@ -163,29 +203,43 @@ body{
     margin-top: 0px;
 }
 
+.exp-pro-titre2 ,.exp-pro-text2{
+    background-color: rgb(190, 190, 190);
+    border-left-style: outset;
+    border-right-style: outset;
+    border-width: 10px;
+    border-color: black;
+}
+
 .exp-pro-titre2{
     width: 90%;
-    text-align: center;
-    background: linear-gradient(1turn,#0094a7, #004360);
     border-radius: 10px 10px 0px 0px;
+    border-top-style: outset;
+
+    text-align: center;
     font-size: 44px;
     font-weight: bold;
     text-decoration: underline;
-    color: rgb(255, 187, 0);
+    color:rgb(255, 145, 0);
 }
 
 
 .exp-pro-text2{
     width: 90%;
-    background: linear-gradient(#0094a7, #002b60);
     border-radius: 0px 0px 10px 10px;
+    border-bottom-style: outset;
     display: grid;
 }
 
+
 .exp-pro-text3{
+    background-color: rgba(255, 255, 255, 0.8) ;
+
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.7) ;
-    border-style: outset;
+    border-style:double;
+    border-width: 8px;
+    border-color: black;
+
     padding: 5px 10px;
     margin : 10px;
     margin-bottom: 40px;
@@ -210,13 +264,32 @@ body{
     color: black
 }
 
+/*Zone que l'on survole avec la souris */
 
-/* fin expérience pro */
+.exp-pro-text3:hover{
+    background-color: rgba(0, 0, 0, 0.9) ;
+    border-color: white;
+
+    .Date_Stage ,.Lieux_Stage ,.Descr_Stage{
+        color: white;
+    }
+}
+
+
+
+/* Fin de la zone */
+
+
+/* fin expérience pro stage */
 
 
 
 
-/* Expérience pro */
+/* Compétences */
+.COMPETENCES{
+    display: grid;
+}
+
 .compétences-titre1{
     display: flex;
     justify-content: center;
@@ -225,21 +298,6 @@ body{
     margin-bottom: 0px;
 }
 
-.compétences-titre2{
-    background: linear-gradient(1turn,#8300a7, #030060);
-    width: 90%;
-    border-radius: 10px 10px 0px 0px;
-    text-align: center;
-    font-size: 44px;
-    font-weight: bold;
-    text-decoration: underline;
-    color: rgb(255, 187, 0);
-}
-
-
-
-/* début zone avec case qui se retournent */
-
 .zone1{
     display: flex;
     justify-content: center;
@@ -247,9 +305,29 @@ body{
     margin-top: 0px;
 }
 
+.compétences-titre2 ,.zone2{ /* Couleur de fonds et bord de la zone */
+    background-color: rgb(190, 190, 190);
+    border-left-style: outset;
+    border-right-style: outset;
+    border-width: 10px;
+    border-color: black;
+}
+
+
+.compétences-titre2{
+    border-radius: 10px 10px 0px 0px;
+    border-top-style: outset;
+    width: 90%;
+    text-align: center;
+    font-size: 44px;
+    font-weight: bold;
+    text-decoration: underline;
+    color:rgb(255, 145, 0);
+}
+
 .zone2{
     border-radius: 0px 0px 10px 10px;
-    background: linear-gradient(#8300a7, #030060);
+    border-bottom-style: outset;
     width: 90%;
     height: auto;
     display: flex;
@@ -257,7 +335,7 @@ body{
     flex-wrap: wrap;
 
 }
-
+/* case qui se retournent */
 .zone3{ /* zone carte avant et arriere */
     border-radius: 10px;
     background-color: transparent;
@@ -301,7 +379,7 @@ body{
   }
   
   .flip-card-avant {
-    background-color: #ff000090;
+    background-color: #ff0000cd;
     color: black;
     font-size: 38px;
     display: grid;
@@ -324,11 +402,15 @@ body{
     height: auto;
     max-height: 200px;
   }
+/* fin zone case qui se retourne */
+/* FIN ZONE COMPETENCES */
 
-  /* fin zone case qui se retourne */
 
 
-  /* Zone métier de l'informatique */
+/* Zone métier de l'informatique */
+.METIER-INFO{
+    display: grid;
+}
 
 .métier-info-titre1, .métier-info-text1{
     display: flex;
@@ -349,22 +431,27 @@ body{
 .métier-info-titre2, .métier-info-text2{
     width: 90%;
     text-align: center;
+    background-color: rgb(190, 190, 190);
+    border-left-style: outset;
+    border-right-style: outset;
+    border-width: 10px;
+    border-color: black;
 }
 
 .métier-info-titre2{
-    background: linear-gradient(1turn,#0094a7, #002b60);
     border-radius: 10px 10px 0px 0px;
+    border-top-style: outset;
     font-size: 44px;
     font-weight: bold;
     text-decoration: underline;
-    color: rgb(255, 187, 0);
+    color:rgb(255, 145, 0);
 }
 
 .métier-info-text2{
-    background: linear-gradient(#0094a7, #030060);
     border-radius: 0px 0px 10px 10px ;
+    border-bottom-style: outset;
     font-size: 32px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding-bottom: 20px;
 }
 
@@ -374,15 +461,16 @@ body{
     transition: transform 0.3s ease-in-out;
 }
 .métier-info-text2 img:hover{
-    transform: scale(1.2);
-    margin-bottom: 30px;
+    transform: scale(1.3);
 }
 
-
-  /* Fin zone métier de l'informatique */
-
+/* Fin zone métier de l'informatique */
 
 
 
-  /* test */
+
+/* test */
+
+
+
 

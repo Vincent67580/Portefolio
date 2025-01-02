@@ -17,6 +17,7 @@ body{
     border-radius: 20px;
     justify-content: center;
     display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .nav-bar2{
@@ -39,16 +40,15 @@ body{
 
 .nav-bar3 a{
     text-decoration: none; 
-    color:black
+    color:black;
+    border-bottom: 5px solid transparent;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
 .nav-bar3 a:hover{
     color: orange;
-    border-bottom: 5px solid gold; 
+    border-bottom: 5px solid gold;
 }
-
-
-
 
 
 
@@ -65,6 +65,7 @@ body{
     width:auto;
     height: auto;
     padding-top: 10px;
+    
 
 }
 .en-tete2{
@@ -76,8 +77,64 @@ body{
     font-size: 76px;
     margin: 0px;
     padding: 10px 10px;
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.4);
 }
 /*FIN ZONE NOM + PRENOM  */
+
+/* Modele pour les bouton */
+button {
+    width: auto;
+    position: relative;
+    height: auto;
+    border: 4px ridge #ea1414;
+    outline: none;
+    background-color:transparent;
+    color: rgb(0, 0, 0);
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px;
+}
+  
+button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color:rgb(190, 190, 190);
+    transition: 0.5s;
+    transform-origin: center;
+}
+  
+button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color:rgb(190, 190, 190);
+    transition: 0.5s;
+}
+  
+button:hover::before, button:hover::after {
+    transform: scale(0);
+    color:white
+}
+  
+button:hover {
+    box-shadow: inset 0px 0px 25px #ea1414;
+}
+/* Fin modele pour les boutons */
+
+
+
+
 
 
 
@@ -141,7 +198,7 @@ body{
     font-size: 32px;
     text-align: center;
     padding-top:15px;
-    padding-bottom: 15px;   
+    padding-bottom: 20px;   
 }
 
 /* Pour "agrandir" l'imange en passant la souris dessus */
@@ -240,19 +297,21 @@ body{
 }
 
 
-.exp-pro-text3{
-    background-color: rgba(255, 255, 255, 0.8) ;
-
+.exp-pro-text3 {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    border-style:double;
+    border-style: double;
     border-width: 8px;
     border-color: black;
-
-    padding: 5px 10px;
-    margin : 10px;
+    padding: 10px;
+    margin: 10px;
     margin-bottom: 40px;
-    align-content: center;
     margin-right: auto;
+    gap: 20px; /* Espacement entre l'image et le texte */
+    transition: 0.4s ease-in-out;
 }
 
 .Date_Stage{
@@ -272,15 +331,35 @@ body{
     color: black
 }
 
+
+.Date_Stage,.Lieux_Stage,.Descr_Stage {
+    transition: 0.4s ease-in-out;
+}
+
+
+.exp-pro-text3 img {
+    flex-shrink: 0; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease-in;
+}
+
 /*Zone que l'on survole avec la souris */
 
 .exp-pro-text3:hover{
     background-color: rgba(0, 0, 0, 0.9) ;
     border-color: white;
 
-    .Date_Stage ,.Lieux_Stage ,.Descr_Stage{
-        color: white;
-    }
+}
+
+.exp-pro-text3:hover .Date_Stage,
+.exp-pro-text3:hover .Lieux_Stage,
+.exp-pro-text3:hover .Descr_Stage {
+    color: white;
+}
+
+.exp-pro-text3 img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(255, 255, 255,1);
 }
 
 
@@ -353,15 +432,9 @@ body{
     margin: auto;
     perspective: 1000px;
     padding: 20px 20px;
-
 }
 
-.flip-card {
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    perspective: 1000px;
-}
+
   
 .flip-card-inner {
     position: relative;
@@ -370,7 +443,7 @@ body{
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: transparent;
 }
   
 .zone3:hover .flip-card-inner {
@@ -398,6 +471,7 @@ body{
     color: rgb(0, 0, 0);
     transform: rotateY(180deg);
     font-size: 24PX;
+    padding: 10px 5px 0px;
 }
 
 .card-avant-titre{
@@ -479,6 +553,4 @@ body{
 
 
 /* test */
-
-
 
